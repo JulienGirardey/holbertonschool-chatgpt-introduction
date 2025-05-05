@@ -70,6 +70,7 @@ class Minesweeper:
                     self.print_board(reveal=True)
                     print("Game Over! You hit a mine.")
                     break
+                # Check victory condition
                 if all(
                     self.revealed[y][x] or (x, y) in self.mines
                     for y in range(self.height)
